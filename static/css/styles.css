@@ -1,0 +1,208 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Menú de navegación */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition-duration: 0.3s;
+}
+.nav-links a:hover {
+    color: #df9bb5;
+    transition: all 0.3s ease;
+}
+
+
+/* Hero section */
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+/* Catálogo de productos */
+#catalogo {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #e5d8dd;
+}
+
+.productos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.producto {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    width: 200px;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+}
+
+h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+/* Footer */
+footer {
+    background-color: #e5e5e5;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.newsletter input {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+}
+
+
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Menú de navegación */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Catálogo de productos */
+#catalogo {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.productos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.producto {
+    position: relative; /* Esto es necesario para que la descripción sea posicionada correctamente */
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #ddd;
+    width: 200px;
+    text-align: center;
+    transition: all 0.3s ease-in-out; /* Transición suave del div */
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+.img-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.producto:hover .img-hover {
+    opacity: 1;
+}
+
+.producto:hover .img-normal {
+    opacity: 0;
+}
+
+/* Animación de la descripción con expansión */
+.descripcion {
+    position: absolute; /* Descripción se posiciona encima del producto */
+    bottom: 0; /* Posicionada en la parte inferior del producto */
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    padding: 10px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
+}
+
+.producto:hover .descripcion {
+    opacity: 1;
+    max-height: 100px; /* El tamaño de la descripción puede variar según la cantidad de texto */
+}
